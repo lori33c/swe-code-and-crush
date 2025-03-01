@@ -293,3 +293,326 @@ right: 20px;
 details > summary::-webkit-details-marker {
 display: none;
 }
+
+/* Responsive Styles */
+
+/* Menu toggle button (initially hidden on desktop) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991px) {
+    /* Navigation adjustments */
+    nav .logo {
+        padding-left: 20px;
+    }
+    
+    nav .nav_links li {
+        margin: 0 16px;
+    }
+    
+    /* Landing page scaling */
+    h1 {
+        font-size: 80px;
+    }
+    
+    h2 {
+        font-size: 65px;
+    }
+    
+    h3 {
+        font-size: 32px;
+    }
+    
+    /* Adjust envelope positions and sizes */
+    .left-letter, .right-letter {
+        width: 250px;
+        height: auto;
+    }
+    
+    /* About section adjustments */
+    .about-us {
+        flex-direction: column;
+        height: auto;
+        padding: 80px 30px;
+    }
+    
+    .about-us-image {
+        width: 500px;
+        height: auto;
+    }
+    
+    .about-us-text {
+        margin-top: 30px;
+    }
+    
+    /* Clouds positioning */
+    .back-cloud {
+        width: 200px;
+        height: auto;
+        left: -50px;
+        top: 150px;
+    }
+    
+    .front-cloud {
+        width: 200px;
+        height: auto;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767px) {
+    /* Enable mobile menu */
+    .menu-toggle {
+        display: block;
+        margin-right: 20px;
+    }
+    
+    nav .nav_content {
+        position: relative;
+    }
+    
+    nav .nav_links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 0 0 20px 20px;
+        padding: 20px 0;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    nav .nav_links.active {
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+    }
+    
+    nav .nav_links li {
+        margin: 10px 0;
+    }
+    
+    nav .social_links {
+        position: absolute;
+        top: calc(100% + 160px);
+        left: 0;
+        right: 0;
+        justify-content: center;
+        background-color: white;
+        padding-bottom: 20px;
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    nav .social_links.active {
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+    }
+    
+    /* Landing page adjustments */
+    .landing_page {
+        flex-direction: column;
+        padding: 120px 20px 40px;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .landing_text {
+        padding: 30px 10px;
+    }
+    
+    h1 {
+        font-size: 60px;
+    }
+    
+    h2 {
+        font-size: 50px;
+    }
+    
+    h3 {
+        font-size: 24px;
+    }
+    
+    p {
+        font-size: 18px;
+    }
+    
+    .date_time {
+        gap: 15px;
+    }
+    
+    .heart_pixel {
+        width: 30px;
+        height: 35px;
+    }
+    
+    /* Handle envelopes */
+    .envelope {
+        position: relative;
+        margin: 10px 0;
+    }
+    
+    .left-envelope, .right-envelope {
+        left: auto;
+        right: auto;
+    }
+    
+    .left-letter, .right-letter {
+        width: 180px;
+        height: auto;
+    }
+    
+    /* About section further adjustments */
+    .about-us-image {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+    }
+    
+    /* Cloud adjustments for smaller screens */
+    .back-cloud, .front-cloud {
+        width: 150px;
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        margin: 10px 0;
+    }
+    
+    .about-us-image-container {
+        flex-direction: column;
+    }
+    
+    /* Prizes section */
+    .prizes {
+        height: auto;
+        padding: 60px 20px;
+    }
+    
+    .prizes img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+    
+    /* FAQ section */
+    .faq {
+        padding: 60px 20px;
+    }
+    
+    main {
+        width: 95%;
+    }
+    
+    summary {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+}
+footer {
+    background: linear-gradient(to bottom, #6B35FF, #4b2491);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+footer p {
+    font-size: 18px;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+footer a {
+    color: #FFD6EA;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 575px) {
+    /* Navbar adjustments */
+    nav {
+        height: 80px;
+        padding: 10px;
+    }
+    
+    
+    nav .nav_content {
+        border-radius: 30px;
+    }
+
+    nav .nav_links {
+        position: absolute;
+        /* top: 100%; */
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 0 0 20px 20px;
+        padding: 20px 0;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        padding-top: 30px; 
+        margin-top: 10px; 
+    }
+    
+    nav .logo h4 {
+        font-size: 18px;
+    }
+    
+    h1 {
+        font-size: 42px;
+    }
+    
+    h2 {
+        font-size: 36px;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .buttons button {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+    
+    .faq h1 {
+        font-size: 42px;
+    }
+}

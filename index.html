@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Code & Crush</title>
 </head>
 <body>
@@ -14,6 +15,9 @@
         <div class="nav_content">
             <div class="logo">
                 <h4>Code & Crush</h4>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
             </div>
             <ul class="nav_links">
                 <li><a href="#home">Home</a></li>
@@ -29,60 +33,60 @@
         </div>
     </nav>
 
-    <div class = "landing_page" id = "home">
-        <div class = "envelope left-envelope">
-            <img class = "left-letter" src="assets/images/letters.png" alt="Envelope">
+    <div class="landing_page" id="home">
+        <div class="envelope left-envelope">
+            <img class="left-letter" src="assets/images/letters.png" alt="Envelope">
         </div>
 
-        <div class = "landing_text">
+        <div class="landing_text">
             <h1>Code & Crush</h1>
             <h2>Designathon</h2>
-            <div class = "date_time">
+            <div class="date_time">
                 <h3>March 14th</h3>
-                <img class = "heart_pixel" src="assets/images/heartpixel.svg" alt="Heart"> 
+                <img class="heart_pixel" src="assets/images/heartpixel.svg" alt="Heart"> 
                 <h3>11AM - 5PM</h3>
             </div>
-            <div class = "buttons">
-                <a href="https://forms.gle/xY8mSHhDTg29pyBy7"><button class = "register">Apply Now</button></a>
-                <a href="mailto:swecsuf.president@gmail.com" target="_blank"><button class = "learn_more">Contact Us</button></a>
+            <div class="buttons">
+                <a href="https://forms.gle/xY8mSHhDTg29pyBy7"><button class="register">Apply Now</button></a>
+                <a href="mailto:swecsuf.president@gmail.com" target="_blank"><button class="learn_more">Contact Us</button></a>
             </div>
         </div>
 
-        <div class = "envelope right-envelope">
-            <img class = "right-letter" src="assets/images/whitedayletters.png" alt="Envelope">
+        <div class="envelope right-envelope">
+            <img class="right-letter" src="assets/images/whitedayletters.png" alt="Envelope">
         </div>
     </div>
 
-    <div class = "about-us" id="about">
-        <div class = "about-us-image-container">
-            <img class = "back-cloud" src="assets/images/cloudback.png" alt="Cloud"></img>
-            <img class = "about-us-image" src="assets/images/SWE.jpg" alt="About Us"></img>
-            <img class = "front-cloud" src="assets/images/cloudfront.png" alt="Cloud"></img>
+    <div class="about-us" id="about">
+        <div class="about-us-image-container">
+            <img class="back-cloud" src="assets/images/cloudback.png" alt="Cloud">
+            <img class="about-us-image" src="assets/images/SWE.jpg" alt="About Us">
+            <img class="front-cloud" src="assets/images/cloudfront.png" alt="Cloud">
         </div>
 
-        <div class = "about-us-text">
-            <h2 style = "text-align: left;">About Us</h2>
+        <div class="about-us-text">
+            <h2>About Us</h2>
             <p> In celebration of White Day, CSUF SWE is hosting a unique designathon event aimed at
                 bringing together like-minded individuals to explore coding, collaborate, and innovate.
                 While our focus is on creating a space where women feel empowered, this event is open
                 to all participants who are committed to fostering a safe, inclusive, and respectful environment for everyone. </p>
 
-            <p>Whether you’re an experienced coder or new to the world of tech, come chill,
+            <p>Whether you're an experienced coder or new to the world of tech, come chill,
                 hack, and connect with others who share your passion for creativity and technology.
-                Let’s build something meaningful together!</p>
+                Let's build something meaningful together!</p>
         </div>
     </div>
 
-    <div class = "prizes" id="prizes">
-        <div class = "prizes-text">
+    <div class="prizes" id="prizes">
+        <div class="prizes-text">
             <h2>Prizes</h2>
             <p> Prizes will be given after the designathon during the closing ceremony.</p>
         </div>
-        <img src="assets/images/prizes.svg" style = "width: 100%" alt="Prizes">
+        <img src="assets/images/prizes.svg" alt="Prizes">
     </div>
 
-    <div class = "faq" id="faq">
-        <h1 style="padding-bottom: 50px;">FAQ</h1>
+    <div class="faq" id="faq">
+        <h1>FAQ</h1>
         <main>
             <details open>
                 <summary>What is this designathon?</summary>
@@ -141,5 +145,26 @@
             </details>
         </main>        
     </div>
+
+    <footer>
+        <p>© 2025 CSUF SWE | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav_links').classList.toggle('active');
+            document.querySelector('.social_links').classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        const navLinks = document.querySelectorAll('.nav_links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('.nav_links').classList.remove('active');
+                document.querySelector('.social_links').classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
